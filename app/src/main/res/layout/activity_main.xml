@@ -4,7 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="홍드로이드"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="70dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="앱개발자"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="70dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요"/>
 
     <EditText
         android:id="@+id/et_test"
@@ -12,9 +34,24 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/btn_move"
+        android:id="@+id/btn_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="이동"/>
+        android:text="버튼"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left">
+
+        <ImageView
+            android:id="@+id/test"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"/>
+
+    </LinearLayout>
+
+
 
 </LinearLayout>

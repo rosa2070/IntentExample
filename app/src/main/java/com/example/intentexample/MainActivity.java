@@ -7,28 +7,34 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btn_move;
-    private EditText et_test;
-    private String str;
+    EditText et_test;
+    Button btn_test;
+    ImageView test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        et_test = findViewById(R.id.et_test);
+        et_test = (EditText)findViewById(R.id.et_test);
 
-        btn_move = findViewById(R.id.btn_move);
-        btn_move.setOnClickListener(new View.OnClickListener() {
+        btn_test = (Button)findViewById(R.id.btn_test);
+        btn_test.setOnClickListener((v) -> {
+            Intent intent = new Intent(MainActivity.this, SubActivity.class);
+            startActivity(intent);
+
+        });
+
+        test = (ImageView)findViewById(R.id.test);
+        test.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                str = et_test.getText().toString();
-                Intent intent = new Intent(MainActivity.this, SubActivity.class);
-                intent.putExtra("str", str);
-                startActivity(intent); //액티비티 이동
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "홍드로이드 잘생김", Toast.LENGTH_SHORT).show();
             }
         });
     }
